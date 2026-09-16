@@ -114,7 +114,9 @@ function ActivityCard({ title, schedule }) {
       <div className="card-content">
         <h3>{title}</h3>
         <p className="activity-schedule">{schedule}</p>
-        <a href="https://wa.me/" target="_blank" rel="noreferrer">Escribinos por WhatsApp →</a>
+        <p className="activity-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </div>
     </article>
   )
