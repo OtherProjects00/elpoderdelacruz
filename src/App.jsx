@@ -11,10 +11,14 @@ const navItems = [
 ]
 
 const activities = [
-  { title: 'GRUPOS CAUDAL', mobileDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.' },
-  { title: 'KIDS', mobileDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.' },
-  { title: 'JÓVENES', mobileDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  { title: 'CURSOS CAUDAL', mobileDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.' },
+  {
+    title: 'ESCUELA BÍBLICA',
+    schedule: 'Sábado · 14:00 a 16:30 hs',
+  },
+  {
+    title: 'REUNIÓN DE ORACIÓN',
+    schedule: 'Miércoles · 19:30 hs',
+  },
 ]
 
 const mapEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4239220542704!2d-58.76991342462089!3d-34.568138572967165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97fe2cabff85%3A0x6d1bf646c4678465!2sIGLESIA%20Y%20FUNDACION%20EL%20PODER%20DE%20LA%20CRUZ!5e0!3m2!1ses-419!2sar!4v1789561672775!5m2!1ses-419!2sar'
@@ -44,11 +48,11 @@ function Header() {
       <button
         className="menu-button"
         type="button"
+        aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
         aria-expanded={menuOpen}
         aria-controls="mobile-navigation"
         onClick={() => setMenuOpen((open) => !open)}
       >
-        <span>MENÚ</span>
         {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
       </button>
 
@@ -103,16 +107,13 @@ function About() {
   )
 }
 
-function ActivityCard({ title, mobileDescription }) {
+function ActivityCard({ title, schedule }) {
   return (
     <article className="activity-card">
       <img src="/assets/activity.png" alt="" />
       <div className="card-content">
         <h3>{title}</h3>
-        <p>
-          <span className="desktop-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</span>
-          <span className="mobile-copy">{mobileDescription}</span>
-        </p>
+        <p className="activity-schedule">{schedule}</p>
         <a href="https://wa.me/" target="_blank" rel="noreferrer">Escribinos por WhatsApp →</a>
       </div>
     </article>
@@ -124,7 +125,7 @@ function Activities() {
     <section className="activities section-anchor" id="actividades">
       <div className="activities-heading">
         <h2>Nuestras actividades</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Espacios para crecer en la fe y compartir en comunidad.</p>
       </div>
       <div className="activities-grid">
         {activities.map((activity) => <ActivityCard {...activity} key={activity.title} />)}
@@ -178,10 +179,6 @@ function Contact() {
           loading="lazy"
           referrerPolicy="strict-origin-when-cross-origin"
         />
-        <div className="map-label">
-          <h3>EL PODER DE LA CRUZ</h3>
-          <p>República Argentina 264 · Moreno<br className="desktop-only" /> <span className="desktop-only">Buenos Aires, Argentina</span></p>
-        </div>
       </div>
     </section>
   )

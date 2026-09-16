@@ -276,9 +276,9 @@ h2 {
   display: grid;
   max-width: var(--max-content);
   margin: 0 auto;
-  grid-template-columns: repeat(4, 280px);
-  justify-content: space-between;
-  gap: 24px;
+  grid-template-columns: repeat(2, 280px);
+  justify-content: center;
+  gap: 64px;
 }
 
 .activity-card {
@@ -319,6 +319,13 @@ h2 {
   color: var(--body-on-light);
   font-size: 15px;
   line-height: 24px;
+}
+
+.card-content .activity-schedule {
+  color: var(--burgundy);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
 }
 
 .card-content a {
@@ -443,30 +450,6 @@ h2 {
   height: 100%;
 }
 
-.map-label {
-  position: absolute;
-  top: 312px;
-  left: 24px;
-  width: 310px;
-  border-radius: 14px;
-  background: var(--burgundy);
-  padding: 16px 20px;
-}
-
-.map-label h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-  white-space: nowrap;
-}
-
-.map-label p {
-  font-size: 16px;
-  line-height: 27px;
-  opacity: 0.82;
-}
-
 .site-footer {
   position: relative;
   display: grid;
@@ -561,8 +544,10 @@ h2 {
 
   .menu-button {
     display: inline-flex;
+    width: 42px;
+    height: 42px;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.08);
@@ -570,13 +555,13 @@ h2 {
     cursor: pointer;
     font: 600 15px/26px 'Open Sans', sans-serif;
     letter-spacing: 0.2px;
-    padding: 5px 9px;
+    padding: 0;
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
   }
 
   .menu-button svg {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
   }
 
   .mobile-nav {
@@ -696,7 +681,7 @@ h2 {
   }
 
   .activities {
-    min-height: 2030px;
+    min-height: 0;
     padding: 56px 24px;
     text-align: center;
   }
@@ -808,25 +793,6 @@ h2 {
     border-radius: 14px;
   }
 
-  .map-label {
-    top: auto;
-    right: 24px;
-    bottom: 13px;
-    left: 24px;
-    width: auto;
-    border-radius: 12px;
-    padding: 14px 16px;
-    overflow: hidden;
-  }
-
-  .map-label h3 {
-    font-size: clamp(19px, 6vw, 24px);
-  }
-
-  .map-label p {
-    white-space: nowrap;
-  }
-
   .site-footer {
     display: flex;
     height: 206px;
@@ -863,10 +829,9 @@ h2 {
 @media (max-width: 370px) {
   .site-header { padding-inline: 14px; }
   .brand { font-size: 17px; }
-  .menu-button { font-size: 13px; }
+  .menu-button { width: 40px; height: 40px; }
   .hero-content, .about, .activities, .meetings, .gallery, .contact { padding-left: 18px; padding-right: 18px; }
   .hero-content { left: 18px; width: calc(100% - 36px); padding: 0; }
-  .map-label { right: 16px; left: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
