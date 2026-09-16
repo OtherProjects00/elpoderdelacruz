@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="660" height="460" viewBox="0 0 660 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mapa vectorial / Calles y marcador" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M660 0H0V460H660V0Z" fill="#90A1B1" fill-opacity="0.12"/>
+<path id="Vector_2" d="M-30 110L690 315M20 420L645 -10M-50 250L710 100M135 -20L370 490M520 -20L300 500" stroke="#FFFDF4" stroke-width="34"/>
+<path id="Vector_3" d="M-30 110L690 315M20 420L645 -10M-50 250L710 100M135 -20L370 490M520 -20L300 500" stroke="#90A1B1" stroke-width="2"/>
+<path id="Vector_4" d="M80 0V460M245 0V460M470 0V460M0 75H660M0 205H660M0 370H660" stroke="#90A1B1" stroke-width="8"/>
+<path id="Vector_5" d="M80 0V460M245 0V460M470 0V460M0 75H660M0 205H660M0 370H660" stroke="#FFFDF4" stroke-width="5"/>
+<path id="Vector_6" d="M404 248C424.987 248 442 230.987 442 210C442 189.013 424.987 172 404 172C383.013 172 366 189.013 366 210C366 230.987 383.013 248 404 248Z" fill="#90A1B1"/>
+<path id="Vector_7" d="M404 151C371.4 151 345 177.4 345 210C345 253.5 404 318 404 318C404 318 463 253.5 463 210C463 177.4 436.6 151 404 151Z" fill="#42101B"/>
+<path id="Vector_8" d="M404 230C415.046 230 424 221.046 424 210C424 198.954 415.046 190 404 190C392.954 190 384 198.954 384 210C384 221.046 392.954 230 404 230Z" fill="#FFFDF4"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="660" height="460" fill="white"/>
+</clipPath>
+</defs>
+</svg>
