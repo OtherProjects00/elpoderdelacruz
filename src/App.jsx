@@ -23,6 +23,17 @@ const activities = [
 
 const mapEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4239220542704!2d-58.76991342462089!3d-34.568138572967165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97fe2cabff85%3A0x6d1bf646c4678465!2sIGLESIA%20Y%20FUNDACION%20EL%20PODER%20DE%20LA%20CRUZ!5e0!3m2!1ses-419!2sar!4v1789561672775!5m2!1ses-419!2sar'
 
+const galleryImages = [
+  { src: '/assets/gallery.png', alt: 'Momento compartido en una reunión' },
+  { src: '/assets/community.png', alt: 'Encuentro de nuestra comunidad' },
+  { src: '/assets/meetings.png', alt: 'Reunión de El Poder de la Cruz' },
+  { src: '/assets/activity.png', alt: 'Actividad de la iglesia' },
+  { src: '/assets/hero-mobile.png', alt: 'Celebración de nuestra comunidad' },
+  { src: '/assets/hero-desktop.png', alt: 'Familia de fe reunida' },
+  { src: '/assets/community.png', alt: 'Un momento de comunión' },
+  { src: '/assets/gallery.png', alt: 'Encuentro compartido en comunidad' },
+]
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -154,9 +165,23 @@ function Gallery() {
     <section className="gallery section-anchor" id="galeria">
       <span className="eyebrow">GALERÍA DE REUNIONES</span>
       <h2>Momentos que compartimos</h2>
+      <div className="gallery-carousel" aria-label="Carrusel de momentos compartidos">
+        <div className="gallery-track">
+          <div className="gallery-group">
+            {galleryImages.map((image, index) => (
+              <img src={image.src} alt={image.alt} key={`carousel-${index}`} />
+            ))}
+          </div>
+          <div className="gallery-group" aria-hidden="true">
+            {galleryImages.map((image, index) => (
+              <img src={image.src} alt="" key={`carousel-copy-${index}`} />
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="gallery-grid">
-        {[1, 2, 3, 4].map((item) => (
-          <img src="/assets/gallery.png" alt={`Momento compartido en una reunión ${item}`} key={item} />
+        {galleryImages.slice(0, 4).map((image, index) => (
+          <img src={image.src} alt={image.alt} key={`mobile-gallery-${index}`} />
         ))}
       </div>
     </section>
